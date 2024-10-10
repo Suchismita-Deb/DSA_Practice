@@ -82,5 +82,8 @@ public class ArrayListImp {
         //        return Integer.compare(a[0], b[0]);
         //    }
         // });
+
+
+        // Need more practice in compare then see the submission on https://leetcode.com/problems/reorder-data-in-log-files/submissions/1417885440/
     }
 }

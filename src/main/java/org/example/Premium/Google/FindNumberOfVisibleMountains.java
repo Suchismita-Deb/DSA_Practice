@@ -10,17 +10,17 @@ import java.util.Arrays;
 // peaks = [[2,2],[6,3],[5,4]]
 // Output: 2
 // Explanation: The diagram above shows the mountains.
-//- Mountain 0 is visible since its peak does not lie within another mountain or its sides. Base from 0 to 4.
-//- Mountain 1 is not visible since its peak lies within the side of mountain 2. Base from 1 to 9.
-//- Mountain 2 is visible since its peak does not lie within another mountain or its sides. Base from 3 to 9.
+// Mountain 0 is visible since its peak does not lie within another mountain or its sides. Base from 0 to 4.
+// Mountain 1 is not visible since its peak lies within the side of mountain 2. Base from 3 to 9.
+// Mountain 2 is visible since its peak does not lie within another mountain or its sides. Base from 1 to 9.
 // There are 2 mountains that are visible.
 
 public class FindNumberOfVisibleMountains {
     class Solution {
         public int visibleMountains(int[][] peaks) {
             int n = peaks.length;
-            int startInd[] = new int[n];
-            int endInd[] = new int[n];
+            int[] startInd = new int[n];
+            int[] endInd = new int[n];
             for (int i = 0; i < n; i++) {
                 startInd[i] = peaks[i][0] - peaks[i][1]; // Right angle isosceles triangle height is same as the half base.
                 // If the peak is at 5,4 then the side is 5-4 = starting from 1 to 5+4 = 9.
@@ -28,7 +28,7 @@ public class FindNumberOfVisibleMountains {
             }
             // Taking the start and the end in a separate array.
             // Need to do in same 2d array as we need to sort based on start point.
-            int base[][] = new int[n][2];
+            int[][] base = new int[n][2];
             for (int i = 0; i < n; i++) {
                 base[i][0] = startInd[i];
                 base[i][1] = endInd[i];
@@ -55,7 +55,7 @@ public class FindNumberOfVisibleMountains {
                 int curStart = base[i][0];
                 int curEnd = base[i][1];
                 int nextStart = base[i + 1][0];
-                int nextEnd = base[i+1][1];
+                int nextEnd = base[i + 1][1];
 
                 if (curStart == nextStart) // Depending on the peak and height one will be overlapped.
                     count--;

@@ -1,6 +1,7 @@
 package org.example.tips;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ArrayImp {
     public static void main(String[] args) {
@@ -13,7 +14,12 @@ public class ArrayImp {
         System.out.println(Arrays.toString(a));
         System.out.println(Arrays.toString(b));
 
+
+
         // b=a will copy the reference and not the element.
+        Scanner scn = new Scanner(System.in);
+        int t = scn.nextInt();
+        System.out.println("t"+t);
 
     }
 }
