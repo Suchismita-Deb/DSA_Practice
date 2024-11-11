@@ -33,13 +33,11 @@ public class BestTimeToBuyAndSellStocks2 {
                 profit = Math.max(-prices[ind] + maxProfitValue(prices, ind + 1, dp, 0),
                         maxProfitValue(prices, ind + 1, dp, 1));
                 // 2 options like can buy and want to explore the option to buy and not to buy.
-                // First part pick meaning cant buy so option is 0 and other part can buy so
-                // option is 1.
+                // First part pick meaning cant buy so option is 0 and other part can buy so option is 1.
                 // Buy meaning the value is invested. Say buy at 5 and sell at 7 meaning 7-5.
             } else {
                 profit = Math.max(prices[ind] + maxProfitValue(prices, ind + 1, dp, 1),
-                        maxProfitValue(prices, ind + 1, dp, 0)); // First part sell so now I can again buy and other part
-                // not sell so cannt buy as it is holding.
+                        maxProfitValue(prices, ind + 1, dp, 0)); // First part sell so now I can again buy and other part not sell so cannt buy as it is holding.
             }
             return dp[ind][option] = profit;
         }

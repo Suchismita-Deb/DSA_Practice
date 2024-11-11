@@ -14,11 +14,11 @@ public class SlidingWindowMaximum {
         // When we get one max then we can remove the element in front of the max.
         // Use deque to add the max value at the end and remove all the small value in the front. Deque is always in the decreasing order.
         // [1,1,1,1,1,4,5]
-        // deque = [1 1 1 1 1] when 4 comes it will check with the first element and remove all 1 and the seque = [4] It will be in decreasing fashion. When we got 5 then we remove 4. Monotonic Decreasing Queue. Need to add the element in O(1) time and need to remove the element in the front O(1) time. With stack insertion is good but removal of the min element form the front in O(1) not possible.
+        // deque = [1 1 1 1 1] when 4 comes it will check with the first element and remove all 1 and the deque = [4] It will be in decreasing fashion. When we got 5 then we remove 4. Monotonic Decreasing Queue. Need to add the element in O(1) time and need to remove the element in the front O(1) time. With stack insertion is good but removal of the min element form the front in O(1) not possible.
 
         // [8,7,6,9]
         // First got max number as 8 added in queue. Then got 7 added in queue and will only remove smaller element. [8,7] so when we need max element will see the first element.
-        // Deque will store the index of the element so when the index is crossing the window then pop the element from queue. Window moves and we remove 8 from queue. Now in th enext window gt 6 so added and max is 7. Now when window move we remove 7 and [6] got 9 and compare 6 is less so remove 6.
+        // Deque will store the index of the element so when the index is crossing the window then pop the element from queue. Window moves and we remove 8 from queue. Now in the next window gt 6 so added and max is 7. Now when window move we remove 7 and [6] got 9 and compare 6 is less so remove 6.
 
         int n = nums.length;
         int[] res = new int[n - k + 1];

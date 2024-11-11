@@ -1,6 +1,8 @@
 package org.example.tips;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 class Pair {
@@ -85,5 +87,9 @@ public class ArrayListImp {
 
 
         // Need more practice in compare then see the submission on https://leetcode.com/problems/reorder-data-in-log-files/submissions/1417885440/
+
+        // When there is entry and exit time - Interval and queue type solution.
+
+        // When there is an array we need the element to sort and the order is also important then sort the element of the array based on the index.
     }
 }

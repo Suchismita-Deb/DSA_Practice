@@ -2,7 +2,7 @@ package org.example.array.matrix;
 
 // https://leetcode.com/problems/count-submatrices-with-equal-frequency-of-x-and-y/description/
 
-// Given a 2D character matrix grid, where grid[i][j] is either 'X', 'Y', or '.', return the number of submatrices that contain: grid[0][0], an equal frequency of 'X' and 'Y', at least one 'X'.
+// Given a 2D character matrix grid, where grid[i][j] is either 'X', 'Y', or '.', return the number of sub matrices that contain: grid[0][0], an equal frequency of 'X' and 'Y', at least one 'X'.
 // grid = [["X","Y","."],["Y",".","."]]
 // Output: 3
 // grid = [[".","."],["Y","X"]]

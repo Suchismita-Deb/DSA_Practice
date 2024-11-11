@@ -28,13 +28,17 @@ public class DijkstraAlgorithm {
     }
     //Function to find the shortest distance of all the vertices from the source vertex S.
     int[] dijkstra(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj, int S) {
+
+        // ArrayList<ArrayList<ArrayList<Integer>>>
+        // 0 -> {1,4},{2,5}
+        // Node 0 is connected to node 1 and 2 and the weight of node 1 is 4 and 2 is 5.
         // Min Heap based on distance. // Default is min heap.
         PriorityQueue<Pair> pq = new PriorityQueue<Pair>((x, y) -> x.distance - y.distance);
         int dist[] = new int[V];
         Arrays.fill(dist, ((int) (1e9)));
 
         dist[S] = 0;
-        pq.add(new Pair(0, S));
+        pq.add(new Pair(0, S)); // Given a source node and say here it is 0 so the distance from 0 to 0 is 0.
 
         while (pq.size() != 0) {
             int dis = pq.peek().distance;
