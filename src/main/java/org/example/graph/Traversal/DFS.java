@@ -39,6 +39,18 @@ public class DFS {
         System.out.println(ls);
     }
 
+
+    public static void dfsAdjList(int node, boolean vis[], ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> ls) {
+        vis[node] = true;
+        ls.add(node);
+
+//        System.out.println(node);
+        for (Integer it : adj.get(node)) {
+            if (vis[it] == false)
+                dfsAdjList(it, vis, adj, ls);
+        }
+    }
+
     private static void AdjMatrix() {
         int v = 3;
         int[][] arr = new int[v + 1][v + 1];
@@ -81,14 +93,5 @@ public class DFS {
         }
     }
 
-    public static void dfsAdjList(int node, boolean vis[], ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> ls) {
-        vis[node] = true;
-        ls.add(node);
 
-//        System.out.println(node);
-        for (Integer it : adj.get(node)) {
-            if (vis[it] == false)
-                dfsAdjList(it, vis, adj, ls);
-        }
-    }
 }

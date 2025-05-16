@@ -8,19 +8,13 @@ public class Implementation {
 
     // https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
     // You are given an array prices where prices[i] is the price of a given stock on the ith day.
-    //
-    //You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
-    //
-    //Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
-    //
-    //
-    //
-    //Example 1:
-    //
-    //Input: prices = [7,1,5,3,6,4]
-    //Output: 5
-    //Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-    //Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
+    // You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+    // Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+    // Example 1:
+    // Input: prices = [7,1,5,3,6,4]
+    // Output: 5
+    // Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+    // Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
     class BestTimeToBuyAndSellStock {
         public int maxProfit(int[] prices) {
@@ -30,6 +24,7 @@ public class Implementation {
                 prefix[i] = Math.min(prefix[i - 1], prices[i - 1]);
             }
             System.out.println(Arrays.toString(prefix));
+            // [100000, 7, 1, 1, 1, 1]
             int max = 0;
             for (int i = prices.length - 1; i >= 0; i--) {
                 max = Math.max(max, prices[i] - prefix[i]);
@@ -70,16 +65,11 @@ public class Implementation {
 
     // https://leetcode.com/problems/longest-repeating-character-replacement/description/
     // You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
-    //
-    //Return the length of the longest substring containing the same letter you can get after performing the above operations.
-    //
-    //
-    //
-    //Example 1:
-    //
-    //Input: s = "ABAB", k = 2
-    //Output: 4
-    //Explanation: Replace the two 'A's with two 'B's or vice versa.
+    // Return the length of the longest substring containing the same letter you can get after performing the above operations.
+    // Example 1:
+    // Input: s = "ABAB", k = 2
+    // Output: 4
+    // Explanation: Replace the two 'A's with two 'B's or vice versa.
     class LongestRepeatingCharacterReplacement {
 
         // Sliding Window often needs hashmap for the variable size window.

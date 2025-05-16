@@ -14,11 +14,13 @@ public class InsertInterval {
                 if (newInterval == null || interval[1] < newInterval[0]) {
                     // [[8,9]]
                     // [12,15] ( 9<12 meaning new will not be in the interval)
+                    // Interval go before the value.
                     ans.add(interval); // Adding the interval.
                 } else if (interval[0] > newInterval[1]) {
                     // [[8,9],[12,15]]
                     // [1,7]
                     ans.add(newInterval);
+                    // newInterval after the interval.
                     ans.add(interval); // newInterval is before the interval and we can add the new interval and also the interval as there will be no merge.
                     newInterval = null;// Making the newInterval as null and can add all the other interval.
                 } else {

@@ -32,8 +32,7 @@ public class LongestCommonSubsequence {
                 return 1+lcs(text1, text2, i - 1, j - 1, dp); // Match adding 1.
             }
             // ace and aec
-            // Shift the i in first string and check if any match and then shift the j in
-            // text2 and check if any match.
+            // Shift the i in first string and check if any match and then shift the j in text2 and check if any match.
             // Return the max.
             return dp[i][j] = Math.max(lcs(text1, text2, i - 1, j, dp), lcs(text1, text2, i, j - 1, dp));
         }

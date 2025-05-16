@@ -2,15 +2,15 @@ package org.example.string;
 
 public class p1 {
     public static void main(String[] args) {
-        Integer num = 10;
-        modify(num);
-        System.out.println(System.identityHashCode(num));
-        num = 100;
-        System.out.println(System.identityHashCode(num));
-        System.out.println(num);
+        var a = 15;
+        var b = 10;
+        A1.addToInt(a,b);
+        System.out.println(a);
     }
 
-    public static void modify(Integer num) {
-        num = 200;
+    public class A1 {
+        public static void addToInt(int x, int amountToAdd) {
+            x = x + amountToAdd;
+        }
     }
 }

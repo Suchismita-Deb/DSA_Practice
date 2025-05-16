@@ -1,12 +1,13 @@
-package org.example.recursionBacktracking;
+package org.example.recursionBacktracking.Subset2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/*
-    No duplicates. When got the same number then move the pointer to the end.
- */
+// No duplicates. When got the same number then move the pointer to the end.
+// https://leetcode.com/problems/subsets-ii/submissions/1315811348/
+
+
 public class Subsets2 {
     class Iterative {
         public List<List<Integer>> subsetsWithDup(int[] nums) {
@@ -60,6 +61,27 @@ public class Subsets2 {
             }
             subsetsNoDup(nums, i + 1, list, subList);
 
+        }
+    }
+
+    class RecursionApproach{
+        class Solution {
+            public List<List<Integer>> subsetsWithDup(int[] nums) {
+                Arrays.sort(nums);
+                List<List<Integer>> ans = new ArrayList<>();
+                subsetNoDup(nums, 0, new ArrayList<>(), ans);
+                return ans;
+            }
+            void subsetNoDup(int nums[], int ind, List<Integer> list, List<List<Integer>> ans){
+                ans.add(new ArrayList<>(list));
+                for(int i=ind;i<nums.length;i++){
+                    if(i!=ind && nums[i]==nums[i-1])
+                        continue;
+                    list.add(nums[i]);
+                    subsetNoDup(nums,i+1,list,ans);
+                    list.remove(list.size() - 1);
+                }
+            }
         }
     }
 }

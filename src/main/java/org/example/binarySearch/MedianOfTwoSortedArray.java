@@ -15,7 +15,7 @@ public class MedianOfTwoSortedArray {
         public double findMedianSortedArrays(int[] nums1, int[] nums2) {
             // Merge sort and get the elements in the same array then O(N) operations.
 
-            // O(log(m+n)) array is already soretd so can think of binary search. When there is log then think of binary search.
+            // O(log(m+n)) array is already sorted so can think of binary search. When there is log then think of binary search.
             // num1[] = [1,2,3,4,5,6,7,8]
             // nums2[] = [1,2,3,4,5]
             // array[] = [1,1,2,2,3,3,4,4,5,5,6,7,8]

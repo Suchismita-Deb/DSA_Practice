@@ -28,4 +28,12 @@ public class LongestIncreasingSubsequence {
             return lis.size();
         }
     }
+
+    class Memoization{
+        // pick and non pick.
+        // ind 0 to N-1 and prev index need -1 to N.
+        // -1 cannot be stored.
+        // conversion -1 index in 0 th place and 0th in 1 place.
+
+    }
 }

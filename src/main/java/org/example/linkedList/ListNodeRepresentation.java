@@ -14,7 +14,7 @@ class ListNode {
     ListNode() {}
 }
 
-public class Representation {
+public class ListNodeRepresentation {
     public static void main(String[] args) {
         ListNode l = new ListNode(5);
         l.next = new ListNode(6);

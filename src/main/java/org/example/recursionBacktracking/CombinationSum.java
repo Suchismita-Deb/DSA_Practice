@@ -8,7 +8,6 @@ import java.util.List;
 // candidates = [2,3,6,7], target = 7.
 // Given distinct integer. return a list of all unique combinations of candidates where the chosen numbers sum to target. Same number can be taken multiple times.
 // Output = [[2,2,3],[7]]
-
 public class CombinationSum {
     class Solution {
 
