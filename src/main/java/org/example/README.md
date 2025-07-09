@@ -90,7 +90,7 @@ Binary Indexed Tree or Fenwick Tree.
 Segment Tree - RMQ, Range Sum, Lazy Propagation.  
 K-D Tree.  
 Disjoint Set.  
-Tries.
-Sparse Table.
-Suffix Automata.
-LCA and RMQ.
+Tries.  
+Sparse Table.  
+Suffix Automata.  
+LCA and RMQ.  
