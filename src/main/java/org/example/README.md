@@ -50,3 +50,47 @@ Prime Factorization.
 Pollard Rho Algorithm.
 
 **Modulo Arithmetic Algorithms**  
+Euclidean Algorithm.  
+Eulers Totient Function.  
+Modular Exponentiation.  
+Modular Multiplicative Inverse.  
+Chinese Remainder Theorem.  
+Chinese Remainder Theorem and Modulo Inverse Implementation.  
+nCr%m.
+
+Counting Inversion.  
+Counting Inversion using BIT.  
+Logarithmic Exponentiation.  
+Square Root of an Integer.  
+Heavy Light Decomposition.  
+Matrix Rank.  
+Gaussian Elimination to Solve Linear Equations.  
+Hungarian Algorithm.  
+Link Cut.  
+Mo Algorithm.  
+Factorial of a large Number.  
+Russian Peasant Multiplication.  
+Catalan Number.  
+
+**Geometrical and Network Flow Algorithms.**
+Convex Hull.  
+Graham Scan.  
+Line Intersection.  
+Interval Tree.  
+Matrix Exponentiation.  
+Maxflow Ford Furkerson Algo and Edmond Karp Implemnetation.  
+Min Cut.  
+Stable Marriage Problem.  
+Hopcroft-Karp Algorith for Maximum Matching.  
+Dinic Algorithm.
+
+### Data Structure.
+
+Binary Indexed Tree or Fenwick Tree.  
+Segment Tree - RMQ, Range Sum, Lazy Propagation.  
+K-D Tree.  
+Disjoint Set.  
+Tries.
+Sparse Table.
+Suffix Automata.
+LCA and RMQ.
