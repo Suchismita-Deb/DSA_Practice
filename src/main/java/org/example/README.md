@@ -72,7 +72,7 @@ Factorial of a large Number.
 Russian Peasant Multiplication.  
 Catalan Number.  
 
-**Geometrical and Network Flow Algorithms.**
+**Geometrical and Network Flow Algorithms.**  
 Convex Hull.  
 Graham Scan.  
 Line Intersection.  
@@ -94,3 +94,8 @@ Tries.
 Sparse Table.  
 Suffix Automata.  
 LCA and RMQ.  
+
+https://github.com/wisdompeak/LeetCode  
+https://www.geeksforgeeks.org/dsa/competitive-programming-a-complete-guide/#geometry-and-game-theory  
+https://cses.fi/book/book.pdf  
+https://xlinux.nist.gov/dads/#R  
