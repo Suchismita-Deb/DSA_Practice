@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
-
+// https://leetcode.com/problems/kth-largest-element-in-a-stream/description/
+// One Approach - Make a list with initial value and make sorted and new element will be added to the exact position and with Binary search we can search the exact position to add the element.
 class KthLargestUsingList {
 
     List<Integer> stream;
@@ -47,6 +48,7 @@ class KthLargestUsingList {
     }
 }
 
+// Another approach using heap. In class add the detail and in constructor initialize it. 
 class KthLargestUsingHeap {
 
     PriorityQueue<Integer> minHeap;
