@@ -2,7 +2,6 @@ package org.example.tips;
 
 import java.util.HashMap;
 import java.util.Map;
-
 public class MapImp {
     public static void main(String[] args) {
         Map<Integer,Integer> mp = new HashMap<>();
@@ -15,5 +14,7 @@ public class MapImp {
         }
         System.out.println("LinkedHashMap maintain insertion order.");
         System.out.println("TreeMap sort the order by key.");
+
+
     }
 }
