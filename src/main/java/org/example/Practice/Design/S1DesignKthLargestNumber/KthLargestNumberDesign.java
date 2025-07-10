@@ -1,4 +1,4 @@
-package org.example.tips;
+package org.example.Practice.Design.S1DesignKthLargestNumber;
 
 import java.util.ArrayList;
 import java.util.Collections;
