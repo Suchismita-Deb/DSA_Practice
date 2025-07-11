@@ -4,12 +4,12 @@ KthLargest(int k, int[] nums) Initializes the object with the integer k and the 
 int add(int val) Adds a new test score val to the stream and returns the element representing the kth largest element in the pool of test scores so far.
  
 
-Example 1.
+**Example 1.**
 Input - ["KthLargest", "add", "add", "add", "add", "add"]  
 [[3, [4, 5, 8, 2]], [3], [5], [10], [9], [4]]
 
-Output: [null, 4, 5, 5, 8, 8]  
-Explanation:
+**Output**: [null, 4, 5, 5, 8, 8]  
+**Explanation**:
 
 KthLargest kthLargest = new KthLargest(3, [4, 5, 8, 2]);  
 kthLargest.add(3); // return 4  
