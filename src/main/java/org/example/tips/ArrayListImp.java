@@ -91,5 +91,7 @@ public class ArrayListImp {
         // When there is entry and exit time - Interval and queue type solution.
 
         // When there is an array we need the element to sort and the order is also important then sort the element of the array based on the index.
+
+        // targetList.addAll(sourceList) adds all elements in sourceList in targetList.
     }
 }
