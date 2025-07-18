@@ -11,7 +11,7 @@ sum(2,5) = 2+7+5+6
 Traversing the array to find the range sum. Say to tal of Q queries and traversing the array n. Total O(Q*n). n = 10^6 and Q = 10^4. Not possible.  
 The fundametal is like in **range** and the query can be like finding the min or max in a range or the avg in a range.
 
-Img - 
+![Img1.png](Img1.png)
 
 **Observations.**  
 Binary Tree.  
@@ -32,11 +32,11 @@ Represent the tree as an array.
 Root index i then the left child index 2i+1 and right child index 2i+2.  
 Root start at 0 index. 
 
-Img - 
+![Img2.png](Img2.png)
 
 SegmentTree[i] = SegmentTree[2*i+1] + SegmentTree[2*i+2]
 
-Image
+![Img3.png](Img3.png)
 
 SubTree[1] = SubTree[2i+1] + SubTree[2i+2] = 3+1 = 4. 
 
