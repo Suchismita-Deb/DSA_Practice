@@ -1,4 +1,4 @@
-### Segment Tree.
+# Segment Tree.
 
 Given an array requirement to find the sum of a range.
 
