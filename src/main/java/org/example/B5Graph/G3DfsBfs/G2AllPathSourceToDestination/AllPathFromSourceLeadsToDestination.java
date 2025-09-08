@@ -1,8 +1,8 @@
-package org.example.B5Graph.G3DfsBfs;
+package org.example.B5Graph.G3DfsBfs.G2AllPathSourceToDestination;
 
 import java.util.ArrayList;
 
-/* Determine whether all paths starting from source eventually, end at destination */
+// Determine whether all paths starting from source eventually, end at destination.
 // https://leetcode.com/problems/all-paths-from-source-lead-to-destination/description/
 
 public class AllPathFromSourceLeadsToDestination {
@@ -15,6 +15,9 @@ public class AllPathFromSourceLeadsToDestination {
             for (int i = 0; i < edges.length; i++) {
                 adj.get(edges[i][0]).add(edges[i][1]);
             }
+            // Directed graph.
+            // Given [0,1] meaning 0 -> 1. In 0 value in adj will add 1.
+
             // Boolean state array with 'B' as we need to know if we have seen the node before.
             return dfs(adj, source, destination, new Boolean[n]);
         }

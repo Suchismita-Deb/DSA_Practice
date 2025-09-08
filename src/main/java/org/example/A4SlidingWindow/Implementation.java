@@ -1,4 +1,4 @@
-package org.example.A1Array.slidingWindow;
+package org.example.A4SlidingWindow;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -71,23 +71,18 @@ public class Implementation {
     // Output: 4
     // Explanation: Replace the two 'A's with two 'B's or vice versa.
     class LongestRepeatingCharacterReplacement {
-
+        // TODO
         // Sliding Window often needs hashmap for the variable size window.
         public int characterReplacement(String s, int k) {
-            // When changing the char in the string then thevalue and the string are
-            // changing.
+            // When changing the char in the string then the value and the string are changing.
             // When checking for the next window the string will be not in exact form.
             // In this case it is stored in hashmap and get the char value.
 
-            // We have the count of all the char and for the max value we are checking if by
-            // changing
-            // any other char for k times if we are getting the max value.
+            // We have the count of all the char and for the max value we are checking if by changing any other char for k times if we are getting the max value.
 
-            // ABABBA - Substring BABB we need to replace the A.
-            // We are replacing the smallest occurring char here A.
+            // ABABBA - Substring BABB we need to replace the A - the smallest occurring char here A.
             // Maintain the count - hashmap.
-            // WindowLength = 4 Count of most char = 3. 4-3 = 1 is the total count of char
-            // needs to be replaced.
+            // WindowLength = 4 Count of most char = 3. 4-3 = 1 is the total count of char needs to be replaced.
 
             // Left and right pointing to the start. Right will increase an check like substring A.
             // Check the formula windowLength = 1. Most frequent char count = 1. 1-1<=k satisfy then continue.
@@ -115,23 +110,15 @@ public class Implementation {
     }
 
     // https://leetcode.com/problems/permutation-in-string/description/
-    // Given two strings s1 and s2, return true if s2 contains a
-    //permutation
-    // of s1, or false otherwise.
-    //
-    //In other words, return true if one of s1's permutations is the substring of s2.
-    //
-    //
-    //
-    //Example 1:
-    //
-    //Input: s1 = "ab", s2 = "eidbaooo"
-    //Output: true
-    //Explanation: s2 contains one permutation of s1 ("ba").
+    // Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.
+    // In other words, return true if one of s1's permutations is the substring of s2.
+    // Input: s1 = "ab", s2 = "eidbaooo"
+    // Output: true
+    // Explanation: s2 contains one permutation of s1 ("ba").
     class PermutationString {
         public boolean checkInclusion(String s1, String s2) {
-            //S1 is present in s2 so checking with the window size.
-            // Frequecny is s1 should match with the same length of frequency of s2.
+            // S1 is present in s2 so checking with the window size.
+            // Frequency is s1 should match with the same length of frequency of s2.
             int n1 = s1.length();
             int n2 = s2.length();
             int[] freq = new int[26];
@@ -153,36 +140,23 @@ public class Implementation {
     }
 
     // https://leetcode.com/problems/minimum-window-substring/description/
-    // Given two strings s and t of lengths m and n respectively, return the minimum window
-    //substring
-    // of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
-    //
-    //The testcases will be generated such that the answer is unique.
-    //
-    //
-    //
-    //Example 1:
-    //
-    //Input: s = "ADOBECODEBANC", t = "ABC"
+    // Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
+    // The testcases will be generated such that the answer is unique.
+    // Input: s = "ADOBECODEBANC", t = "ABC"
     //Output: "BANC"
     //Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
     class MinimumWindowSubstring {
+        // TODO
         public String minWindow(String s, String t) {
             // Making one hashmap to store the char count of t as it contains duplicates.
 
             // One pointing start and another substring where the char count of s matches with t.
 
-            // To check the match will take the t hashmap and the word hashmap and store the
-            // count. If the char at word is matching with the count of the char then update
-            // the variable by 1.
+            // To check the match will take the t hashmap and the word hashmap and store the count. If the char at word is matching with the count of the char then update the variable by 1.
 
-            // When the count of word matches with count of t then update the variable by 1
-            // and if the variable matches with the total char needed then the stubstring
-            // contains all char and we can store the length.
+            // When the count of word matches with count of t then update the variable by 1 and if the variable matches with the total char needed then the substring contains all char and we can store the length.
 
-            // Then we can increase the i pointer from the start and keep on check the char
-            // in the map. If no change then continue the i++ if not then increase the j and
-            // make the substring valid.
+            // Then we can increase the i pointer from the start and keep on check the char in the map. If no change then continue the i++ if not then increase the j and make the substring valid.
 
             // Will take the min length.
 

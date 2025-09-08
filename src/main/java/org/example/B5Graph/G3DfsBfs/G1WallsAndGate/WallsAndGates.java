@@ -1,4 +1,4 @@
-package org.example.B5Graph.G3DfsBfs.WallsAndGate;
+package org.example.B5Graph.G3DfsBfs.G1WallsAndGate;
 
 import java.util.LinkedList;
 import java.util.Queue;

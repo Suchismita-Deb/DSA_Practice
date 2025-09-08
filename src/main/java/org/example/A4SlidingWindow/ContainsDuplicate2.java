@@ -19,8 +19,7 @@ public class ContainsDuplicate2 {
             // Window size max is k and size can be from 1 to k. It is not fixed size of k.
             // Generally variable size we take hashmap.
             HashSet<Integer> hset = new HashSet<>();
-            // Within the size range I need to check if the value is present. To check
-            // hashmap takes min time.
+            // Within the size range I need to check if the value is present. To check hashmap takes min time.
             while (j < nums.length) {
                 if (hset.contains(nums[j]))
                     return true;

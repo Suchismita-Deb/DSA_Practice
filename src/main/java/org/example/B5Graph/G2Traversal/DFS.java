@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class DFS {
     public static void main(String[] args) {
         AdjList();
-        AdjMatrix();
+        // AdjMatrix();
     }
 
     private static void AdjList() {

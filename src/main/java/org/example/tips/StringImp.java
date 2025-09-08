@@ -1,5 +1,7 @@
 package org.example.tips;
 
+import java.util.HashMap;
+
 public class StringImp {
     public static void main(String[] args) {
 
@@ -20,5 +22,12 @@ public class StringImp {
         String input = "aeiouAEIOU";
         boolean isOnlyVowels = input.chars()
                 .allMatch(c -> "aeiouAEIOU".indexOf(c) >= 0);
+
+        String t = "ABBABABA";
+        HashMap<Character, Integer> hmapT = new HashMap<>();
+        for (char x : t.toCharArray()) {
+            // Converting a string to a chararray toCharArray()
+            hmapT.put(x, hmapT.getOrDefault(x, 0) + 1);
+        }
     }
 }

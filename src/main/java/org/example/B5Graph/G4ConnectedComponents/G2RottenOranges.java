@@ -1,4 +1,4 @@
-package org.example.B5Graph.G11practice;
+package org.example.B5Graph.G4ConnectedComponents;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -7,7 +7,7 @@ import java.util.Queue;
 
 //grid = [[2,1,1],[1,1,0],[0,1,1]]
 //Output: 4
-public class RottenOranges {
+public class G2RottenOranges {
     // Checking for all the levels and not going in depth of one node.
     // Multisource BFS.
     class Pair {

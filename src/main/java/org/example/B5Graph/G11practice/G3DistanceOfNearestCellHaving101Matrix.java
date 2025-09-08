@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class DistanceOfNearestCellHaving101Matrix {
+public class G3DistanceOfNearestCellHaving101Matrix {
 
     class Node {
         int row;

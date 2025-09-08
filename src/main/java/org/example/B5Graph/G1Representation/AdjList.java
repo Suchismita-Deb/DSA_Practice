@@ -6,9 +6,9 @@ public class AdjList {
     public static void main(String[] args) {
         ArrayList<ArrayList> adj = new ArrayList<>();
         int v = 3;
-        // Initializing with empty value.
+        // Initializing with empty value. No initialization then adj.get(i) will give IndexOutOfBound Exception.
         for (int i = 0; i <= v; i++) {
-            adj.add(new ArrayList<Integer>());
+            adj.add(new ArrayList<>());
         }
         // Undirected graph.
         // 1--2

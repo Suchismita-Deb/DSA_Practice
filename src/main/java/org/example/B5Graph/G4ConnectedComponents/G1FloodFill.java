@@ -1,10 +1,10 @@
-package org.example.B5Graph.G11practice;
+package org.example.B5Graph.G4ConnectedComponents;
 
 import java.util.Arrays;
 
 // https://leetcode.com/problems/flood-fill/description/
 
-public class FloodFill {
+public class G1FloodFill {
     class Solution {
 
         public int[][] floodFill(int[][] image, int sr, int sc, int color) {

@@ -23,7 +23,7 @@ public class FindMedianFromDataStream {
         // When the number are coming in order ans sorted then we can check for the
         // middle value. We have to make the number in sorted order.
 
-        // If we sort always then O(log n) else making thearray traverse amd place in
+        // If we sort always then O(log n) else making the array traverse amd place in
         // sorted order will cost O(n).
 
         // Making 2 part. one part will contain n/2 element and other will contain n/2
