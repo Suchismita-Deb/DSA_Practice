@@ -16,7 +16,7 @@ public class MergeInterval {
                     val[i][j] = intervals[i][j];
                 }
             }
-            Arrays.sort(intervals,(a, b) ->Integer.compare(a[0],b[0]));
+            Arrays.sort(intervals); //  (a, b) ->Integer.compare(a[0],b[0]) default.
 
             ArrayList<int[]> ans = new ArrayList<>();
             // ArrayList of array.
