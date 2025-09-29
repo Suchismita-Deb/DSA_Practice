@@ -14,6 +14,8 @@ import java.util.List;
 // start =[0,10,15]
 // end=[15,20,30]
 // Start point 0. startvalue<endvalue 0<15 counter++ and start++. When start at 15 and end at 15 then move the end pointer and when all the start value are done then return max counter.
+
+
 public class MeetingRoom2 {
     // Count the number of overlapping intervals. Merge the overlapping intervals and then check for the size.
     // Copy the array and then check the size.
