@@ -1,4 +1,4 @@
-package org.example.Premium.Amazon;
+package org.example.Premium.Amazon.AmazonSpringStudyPlan23;
 
 // You are given a 0-indexed string s consisting of only lowercase English letters. In one operation, you can change any character of s to any other character.
 //

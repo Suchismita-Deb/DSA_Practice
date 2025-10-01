@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class DFS {
     public static void main(String[] args) {
-        AdjList();
-        // AdjMatrix();
+//        AdjList();
+         AdjMatrix();
     }
 
     private static void AdjList() {
@@ -83,15 +83,13 @@ public class DFS {
     }
 
     private static void dfsAdjMatrix(int node, boolean[] vis, int[][] arr, ArrayList<Integer> ls) {
-        vis[node] = true;
+//        vis[node] = true;
         ls.add(node);
         for (int i = 0; i < arr.length; i++) {
-            if (vis[i] == false) {
+            if (arr[node][i] == 1 && vis[i] == false) {
                 vis[i] = true;
                 dfsAdjMatrix(i, vis, arr, ls);
             }
         }
     }
-
-
 }

@@ -1,4 +1,4 @@
-package org.example.Premium.Amazon;
+package org.example.Premium.Amazon.AmazonSpringStudyPlan23;
 
 // https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/description/
 

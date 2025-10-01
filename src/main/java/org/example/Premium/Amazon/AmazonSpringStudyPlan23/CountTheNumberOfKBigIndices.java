@@ -1,4 +1,4 @@
-package org.example.Premium.Amazon;
+package org.example.Premium.Amazon.AmazonSpringStudyPlan23;
 
 // You are given a 0-indexed integer array nums and a positive integer k.
 // We call an index i k-big if the following conditions are satisfied:

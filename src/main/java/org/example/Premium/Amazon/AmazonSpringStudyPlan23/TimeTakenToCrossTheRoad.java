@@ -1,4 +1,4 @@
-package org.example.Premium.Amazon;
+package org.example.Premium.Amazon.AmazonSpringStudyPlan23;
 
 import java.util.LinkedList;
 import java.util.Queue;

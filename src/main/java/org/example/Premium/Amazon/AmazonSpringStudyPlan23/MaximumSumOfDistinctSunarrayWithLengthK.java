@@ -1,4 +1,4 @@
-package org.example.Premium.Amazon;
+package org.example.Premium.Amazon.AmazonSpringStudyPlan23;
 
 // https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/description/
 

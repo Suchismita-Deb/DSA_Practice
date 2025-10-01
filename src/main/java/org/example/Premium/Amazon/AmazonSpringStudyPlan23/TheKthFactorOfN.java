@@ -1,4 +1,4 @@
-package org.example.Premium.Amazon;
+package org.example.Premium.Amazon.AmazonSpringStudyPlan23;
 
 // You are given two positive integers n and k. A factor of an integer n is defined as an integer i where n % i == 0.
 //
