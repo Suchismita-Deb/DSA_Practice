@@ -3,8 +3,10 @@ package org.example.B4DynamicProgramming.Dp02DpOnGrid;
 import java.util.Arrays;
 
 // https://leetcode.com/problems/minimum-path-sum/description/
-// Starting from the first corner block and ending in the last corner block.
+// Starting from the first corner block and ending in the last corner block. It can go right and down.
 // Starting fixed and Ending Fixed.
+// The minimum sun between top and left.
+
 public class MinimumPathSum {
     public int minPathSum(int[][] grid) {
         int n = grid.length;

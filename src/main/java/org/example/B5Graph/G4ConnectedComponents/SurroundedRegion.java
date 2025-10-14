@@ -3,6 +3,9 @@ package org.example.B5Graph.G4ConnectedComponents;
 public class SurroundedRegion {
 
     // The O should be surrounded by X on all side so if O (Big O) is in the boundary region then all connected nodes will e marked to X.
+    // Component O should be surrounded by X in all 4 sides. When O in the boundary it is not counted.
+    // We can see all the O in the boundary and mark then not possible.
+    // DFS on the connected component O in the boundary and mark then 1. Then after the DFS see the matrix with all value O is the count.
     static void dfs(int row, int col, int vis[][],
                     char mat[][], int delrow[], int delcol[]) {
         vis[row][col] = 1;
@@ -59,6 +62,73 @@ public class SurroundedRegion {
             for (int j = 0; j < m; j++) {
                 if (vis[i][j] == 0 && mat[i][j] == 'O')
                     mat[i][j] = 'X';
+            }
+        }
+    }
+
+
+    // Not using the visited array. The main array only will be changed to any random character when it is not counted. In the final will set them back to X.
+    class Solution {
+        static void dfs(int row, int col, char mat[][], int delrow[], int delcol[]) {
+            mat[row][col] = '1';
+
+            int n = mat.length;
+            int m = mat[0].length;
+
+            // check for top, right, bottom, left
+            for (int i = 0; i < 4; i++) {
+                int nrow = row + delrow[i];
+                int ncol = col + delcol[i];
+                // check for valid coordinates and unvisited Os
+                if (nrow >= 0 && nrow < n && ncol >= 0 && ncol < m
+                        && mat[nrow][ncol] == 'O') {
+                    dfs(nrow, ncol, mat, delrow, delcol);
+                }
+            }
+        }
+
+        public void solve(char[][] mat) {
+            int delrow[] = {-1, 0, +1, 0};
+            int delcol[] = {0, 1, 0, -1};
+            int n = mat.length;
+            int m = mat[0].length;
+            int vis[][] = new int[n][m];
+            // traverse first row and last row
+            for (int j = 0; j < m; j++) {
+                // check for unvisited Os in the boundary rws
+                // first row
+                if (mat[0][j] == 'O') {
+                    dfs(0, j, mat, delrow, delcol);
+                }
+
+                // last row
+                if (mat[n - 1][j] == 'O') {
+                    dfs(n - 1, j, mat, delrow, delcol);
+                }
+            }
+
+            for (int i = 0; i < n; i++) {
+                // check for unvisited Os in the boundary columns
+                // first column
+                if (mat[i][0] == 'O') {
+                    dfs(i, 0, mat, delrow, delcol);
+                }
+
+                // last column
+                if (mat[i][m - 1] == 'O') {
+                    dfs(i, m - 1, mat, delrow, delcol);
+                }
+            }
+
+            // if unvisited O then convert to X
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    if (mat[i][j] == 'O')
+                        mat[i][j] = 'X';
+                    if(mat[i][j]=='1'){
+                        mat[i][j] = 'O';
+                    }
+                }
             }
         }
     }

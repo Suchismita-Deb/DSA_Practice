@@ -2,6 +2,8 @@ package org.example.B5Graph.G4ConnectedComponents;
 
 // https://leetcode.com/problems/number-of-islands/
 
+import java.util.Arrays;
+
 public class NumberOfIsland {
     public int numIslands(char[][] grid) {
         // [["1","1","0","0","0"],
@@ -34,5 +36,35 @@ public class NumberOfIsland {
         dfs(grid, i - 1, j);
         dfs(grid, i, j + 1);
         dfs(grid, i, j - 1);
+    }
+
+    // Not changing the original array.
+    class Solution {
+        public int numIslands(char[][] grid) {
+            int vis[][] = new int[grid.length][grid[0].length];
+            int count=0;
+            for(int row[]:vis){
+                Arrays.fill(row, -1);
+            }
+            for(int i=0;i<grid.length;i++){
+                for(int j=0;j<grid[0].length;j++){
+
+                    if(grid[i][j]=='1' && vis[i][j]==-1){
+                        count++;
+                        dfs(grid, i, j, vis);
+                    }
+                }
+            }
+            return count;
+        }
+        void dfs(char[][] grid, int i, int j, int vis[][]){
+            if(i>=grid.length || j>=grid[0].length || i<0 || j<0 || grid[i][j]=='0' || vis[i][j]!=-1) return;
+            vis[i][j] = 1;
+            dfs(grid,i+1,j,vis);
+            dfs(grid,i,j+1,vis);
+            dfs(grid,i-1,j,vis);
+            dfs(grid,i,j-1,vis);
+
+        }
     }
 }

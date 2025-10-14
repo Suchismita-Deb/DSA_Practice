@@ -16,6 +16,15 @@ public class MapImp {
         System.out.println("LinkedHashMap maintain insertion order.");
         System.out.println("TreeMap sort the order by key.");
 
+        // TreeMap implements NavigableMap, which maintains sorted order of keys. That’s why you get access to methods like firstKey(), lastKey(), higherKey(), lowerKey(). Not working for duplicate value as it will update the the key with new value.
+        // higherKey(K)	Returns the least key strictly greater than the given key K
+        // lowerKey(K)	Returns the greatest key strictly less than the given key K
+        // treeMap mp = [(20,"Twenty"),(10,"Ten"),(30,"Thirty")]
+        // System.out.println("Lower than 30: " + map.lowerKey(30));   // 20
+        // System.out.println("Higher than 25: " + map.higherKey(25)); // 30
+        // System.out.println("First Key: " + mp.firstKey()); // 20
+        // System.out.println("Last Key: " + mp.lastKey());   // 30
+        // HashMap has no firstKey or lastKey.
 
         // Map of String and an ArrayList<>
         Map<String, ArrayList<String>> mpArrayList = new HashMap<>();
@@ -30,7 +39,6 @@ public class MapImp {
             System.out.println(key + " -> " + value);
         }
         // Iterate on Map other way like keyset and foreach.
-
 
     }
 }
