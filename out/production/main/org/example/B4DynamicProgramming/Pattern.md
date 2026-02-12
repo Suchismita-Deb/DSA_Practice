@@ -1,6 +1,0 @@
-LIS.
-
-KnapSack.
-
-Unbounded Knapsack.
-
