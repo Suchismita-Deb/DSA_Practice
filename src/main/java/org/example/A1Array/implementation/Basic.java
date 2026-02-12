@@ -182,4 +182,52 @@ public class Basic {
 
         }
     }
+
+    //Rotate array.
+    // https://leetcode.com/problems/rotate-array/description
+    // Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+    // Example 1:
+    //
+    // Input: nums = [1,2,3,4,5,6,7], k = 3
+    // Output: [5,6,7,1,2,3,4]
+    // Explanation:
+    // rotate 1 steps to the right: [7,1,2,3,4,5,6]
+    // rotate 2 steps to the right: [6,7,1,2,3,4,5]
+    // rotate 3 steps to the right: [5,6,7,1,2,3,4]
+
+    // Example 2.
+    // Input: nums = [-1,-100,3,99], k = 2
+    // Output: [3,99,-1,-100]
+    // Explanation:
+    // rotate 1 steps to the right: [99,-1,-100,3]
+    // rotate 2 steps to the right: [3,99,-1,-100]
+    class Solution {
+        public void rotate(int[] nums, int k) {
+            // 0 1 2 3 4 5 6
+            // 1 2 3 4 5 6 7
+            // val = 4
+            // 4 5 6 7 1 2 3
+            // The third index (7-4) in the first place.
+            // val = 3
+            // 5 6 7 1 2 3 4
+            // The fouth index (7-3) in the first place.
+            // n-k is the index moving point.
+            // Then index 1 is at 5th place.
+            // ind = 1 and ind+val = (1+4)%n = 5.
+
+            int n = nums.length;
+            int arr[] = new int[n];
+
+
+            int pos=0;
+            for(int i:nums){
+                arr[pos] = i;
+                pos++;
+            }
+            for(int i=0;i<n;i++){
+                // int val = Math.abs(n-k); // nums[(val+i)%n] = arr[i]; It will not be correct when there will be rotation like [1,2,3] k = 4.
+                nums[(i+k)%n] = arr[i];
+            }
+        }
+    }
 }

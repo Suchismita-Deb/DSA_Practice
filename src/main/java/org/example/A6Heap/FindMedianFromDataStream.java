@@ -5,7 +5,7 @@ import java.util.Queue;
 
 // https://leetcode.com/problems/find-median-from-data-stream/description/
 
-public class FindMedianFromDataStream {
+public class    FindMedianFromDataStream {
     class MedianFinder {
         // Input
         //["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"]

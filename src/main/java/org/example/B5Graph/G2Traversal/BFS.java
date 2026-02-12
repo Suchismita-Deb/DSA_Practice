@@ -85,6 +85,7 @@ public class BFS {
         }
 
         System.out.println(adj); // [[1], [2, 0], [1, 3], [2]]
+        // It is showing like a matrix but it is a adj list the index and the connected value.
 
         ArrayList<Integer> arr = new ArrayList<>();
         Queue<Integer> q = new LinkedList<>();
