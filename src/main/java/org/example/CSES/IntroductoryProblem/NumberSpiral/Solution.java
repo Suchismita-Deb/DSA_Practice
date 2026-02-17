@@ -38,7 +38,6 @@ public class Solution {
                 else val += (max - row);
             }
             System.out.println(val);
-
         }
     }
 }
